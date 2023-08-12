@@ -1,0 +1,12 @@
+{%extends 'programe/home.html'%}
+{%block title%}signin page{%endblock%}
+{%block body%}
+<h2 style="margin-left: 45%;">SIGNIN PAGE</h2>
+<form method="post" enctype="multipart/form-data">
+{%csrf_token%}
+<table style="margin-left: 40%; margin-top: 2%;">
+{{data.as_table}}
+</table>
+<input type="submit" value="submit" style="margin-left: 50%; margin-top: 2%;">
+</form>
+{%endblock%}

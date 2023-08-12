@@ -1,0 +1,13 @@
+{%extends 'programe/home.html'%}
+{%block title%}signup page{%endblock%}
+{%block body%}
+<h2 style="margin-left: 42%;">SIGNUP PAGE</h2>
+<form method="post" enctype="multipart/form-data">
+{%csrf_token%}
+<table style="margin-left: 35%; margin-top: 5%;">
+{{data.as_table}}
+</table>
+<input type="submit" value="submit" style="margin-left: 35%;">
+</form>
+<a href="{% url 'app:signin' %}" class="btn btn-secondary btn-lg active" role="button" aria-pressed="true" style="margin-left: 50%;">signin</a>
+{%endblock%}
